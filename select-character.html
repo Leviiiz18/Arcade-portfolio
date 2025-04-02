@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Character</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="character-page">
+    <div class="selection-container">
+        <h2>Choose Your Character</h2>
+        <div class="characters">
+            <div class="character" data-character="serious">
+                <img src="serious.png" alt="Serious Mode">
+                <p>Serious Mode</p>
+            </div>
+            <div class="character" data-character="gaming">
+                <img src="gaming.png" alt="Gaming Mode">
+                <p>Gaming Mode</p>
+            </div>
+            <div class="character" data-character="casual">
+                <img src="casual.png" alt="Casual Mode">
+                <p>Casual Mode</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".character").forEach(character => {
+            character.addEventListener("click", function() {
+                const selectedCharacter = this.getAttribute("data-character");
+                localStorage.setItem("selectedCharacter", selectedCharacter);
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+</body>
+</html>

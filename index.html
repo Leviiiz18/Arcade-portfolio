@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudranarayan's Arcade Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <audio id="arcade-music" loop autoplay>
+        <source src="img\lm.mp3" type="audio/mpeg">
+    </audio>
+    <button id="mute-btn">🔊 Mute</button>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Arcade</h1>
+            <button id="start-btn">Press Start</button>
+        </div>
+    </section>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content" class="hidden">
+
+     <!-- Navigation -->
+<nav>
+    <button class="nav-btn" onclick="showSection('about')">▶ About Me</button>
+    <button class="nav-btn" onclick="showSection('projects')">▶ Projects</button>
+    <button class="nav-btn" onclick="showSection('skills')">▶ Skills</button>
+    <button class="nav-btn" onclick="showSection('contact')">▶ Contact</button>
+</nav>
+
+<div id="game-start">
+    <button id="play-game">▶ Play Dino Run</button>
+</div>
+<script>
+    document.getElementById("play-game").addEventListener("click", function () {
+        window.location.href = "dino.html"; // Redirects to dino.html
+    });
+</script>
+
+<section id="about" class="section">
+    <h2>▶ About Me</h2>
+    <p>Hey! I'm <b>Rudranarayan</b>, an AI Engineer & Software Developer.</p>
+    <p>I love creating futuristic tech and designing creative websites.</p>
+    <p>When I’m not coding, you’ll find me gaming or watching anime!</p>
+
+    <!-- Achievements (Arcade Style) -->
+    <div class="achievements">
+        <h3>🏆 High Scores</h3>
+        <div class="score-card">
+            <span>👑 Aethron 2K25 Winner</span>
+            <span class="score">+999 XP</span>
+        </div>
+        <div class="score-card">
+            <span>🔮 WizWizard 2K24 Champion</span>
+            <span class="score">+888 XP</span>
+        </div>
+        <div class="score-card">
+            <span>💻 Code Conqueror</span>
+            <span class="score">+777 XP</span>
+        </div>
+</section>
+
+     <!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="falling-tiles"></div>
+    <h2 class="projects-heading">🎮 My Projects 🕹️</h2>
+    <div class="project-card" onclick="window.location.href='https://github.com/Leviiiz18/UndertheSun'">
+        <h3>🚦 Traffic Congestion App</h3>
+        <p>Predict traffic congestion in real-time!</p>
+    </div>
+    <div class="project-card" onclick="window.location.href='https://github.com/Leviiiz18/FOOTBALL-EPL-MODEL'">
+        <h3>⚽ EPL Match Predictor</h3>
+        <p>Predict Premier League match results!</p>
+    </div>
+    <div class="project-card" onclick="window.location.href='https://github.com/suyashpatil14/code-smarsher-2k25'">
+        <h3>🎮 ummmmmm</h3>
+        <p>Yet another project...</p>
+    </div>
+    <div class="project-card" onclick="window.location.href=''">
+        <h3>🍏 FitFuel - Meal Planner</h3>
+        <p>Plan your meals and track calories!</p>
+    </div>
+</section>
+
+      <!-- Skills Section -->
+<section id="skills" class="section">
+    <div class="falling-tiles"></div>
+    <h2>Skills</h2>
+    
+    <!-- Skills Progress Bars -->
+    <div class="skill-bar">
+        <div class="skill-name">HTML</div>
+        <div class="progress">
+            <div class="progress-bar html" style="width: 90%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name">CSS</div>
+        <div class="progress">
+            <div class="progress-bar css" style="width: 85%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name">JavaScript</div>
+        <div class="progress">
+            <div class="progress-bar js" style="width: 80%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name">Python</div>
+        <div class="progress">
+            <div class="progress-bar python" style="width: 75%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name">Flask</div>
+        <div class="progress">
+            <div class="progress-bar flask" style="width: 70%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name">AI & ML</div>
+        <div class="progress">
+            <div class="progress-bar ai-ml" style="width: 65%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-name">MongoDB</div>
+        <div class="progress">
+            <div class="progress-bar mongodb" style="width: 60%;"></div>
+        </div>
+    </div>
+    
+    <!-- Resume Button -->
+    <a href="rez.html" id="resume-btn" target="_blank">View My Resume</a></section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="falling-tiles"></div>
+    <h2>Contact Me</h2>
+    
+    <!-- Contact Form with Game-Style Input Fields -->
+    <form id="contact-form">
+        <div class="input-container">
+            <input type="text" id="name" placeholder="Your Name">
+            <div class="glow"></div>
+        </div>
+        <div class="input-container">
+            <input type="email" id="email" placeholder="Your Email">
+            <div class="glow"></div>
+        </div>
+        <div class="input-container">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <div class="glow"></div>
+        </div>
+        <button type="submit" id="submit-btn">Press to Send</button>
+    </form>
+    
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-btn linkedin">LinkedIn</a>
+        <a href="https://www.instagram.com/your-profile" target="_blank" class="social-btn instagram">Instagram</a>
+        <a href="https://github.com/your-profile" target="_blank" class="social-btn github">GitHub</a>
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html> 

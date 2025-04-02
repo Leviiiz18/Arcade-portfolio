@@ -1,0 +1,64 @@
+body {
+    background-color: #211C84;
+    color: #B5A8D5;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #4D55CC, #7A73D1);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); }
+    100% { box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6); }
+}
+
+h1 {
+    font-size: 2rem;
+    color: #FFD700;
+    text-shadow: 3px 3px #000;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+section {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px dashed #FFD700;
+    border-radius: 10px;
+}
+
+.project {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.skills p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFD700;
+}

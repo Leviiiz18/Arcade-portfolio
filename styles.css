@@ -1,0 +1,471 @@
+/* Import Arcade Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #211C84; /* Dark Purple */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('img\\Pixilart - A calm night with Link.gif') no-repeat center center/cover;
+}
+
+.hero-content {
+    text-align: center;
+    animation: flicker 1.5s infinite alternate;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #211C84; /* Light Purple */
+    text-shadow: 0 0 10px #4D55CC, 0 0 30px #4D55CC, 0 0 50px #4D55CC;
+}
+
+/* Start Button */
+#start-btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    background: #4D55CC; /* Light Purple */
+    border: 3px solid #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #4D55CC, 0 0 20px #4D55CC;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Button Hover Effect */
+#start-btn:hover {
+    background: #7A73D1; /* Lavender Purple */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #4D55CC, 0 0 40px #4D55CC;
+}
+
+/* Hide main content initially */
+.hidden {
+    display: none;
+}
+
+/* Navigation Bar */
+nav {
+    background: #211C84; /* Dark Purple */
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 0 20px #4D55CC, 0 0 40px #4D55CC;
+    text-align: center;
+}
+
+/* Navigation Button */
+.nav-btn {
+    background: #7A73D1; /* Lavender Purple */
+    color: #fff;
+    padding: 12px 25px;
+    margin: 10px;
+    border: 2px solid #4D55CC; /* Light Purple */
+    font-size: 1.2rem;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #4D55CC, 0 0 20px #4D55CC;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #4D55CC, 0 0 20px #4D55CC;
+}
+
+.nav-btn:hover {
+    background: #B5A8D5; /* Very Light Purple */
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #4D55CC, 0 0 50px #4D55CC;
+}
+
+/* Neon glow effect for the entire navigation */
+nav:hover {
+    box-shadow: 0 0 30px #4D55CC, 0 0 60px #4D55CC;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    background: rgba(10, 0, 20, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 30px #4D55CC; /* Light Purple */
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+}
+
+/* Project Cards */
+.project-card {
+    background: #290033; /* Dark Purple */
+    border: 2px solid #4D55CC; /* Light Purple */
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    width: 250px;
+    transition: 0.3s;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    text-shadow: 0 0 10px #4D55CC, 0 0 20px #4D55CC;
+    animation: flicker 1.5s infinite alternate;
+}
+
+.project-card:hover {
+    background: #4D55CC; /* Light Purple */
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #4D55CC, 0 0 40px #4D55CC;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 5px #4D55CC, 0 0 15px #4D55CC;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.project-card:hover p {
+    opacity: 1;
+}
+/* Skills Section */
+#skills {
+    padding: 50px 20px;
+    background: rgba(10, 0, 20, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 30px #4D55CC;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Skills Heading */
+#skills h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #4D55CC, 0 0 20px #4D55CC;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Skill Bars */
+.skill-bar {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 10px;
+}
+
+.skill-name {
+    font-weight: bold;
+}
+
+.progress {
+    width: 100%;
+    height: 20px;
+    background: #1a001a;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #4D55CC;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+/* Specific Colors for Each Skill */
+.progress-bar.html {
+    background: #ff5733; /* Orange-Red for HTML */
+}
+
+.progress-bar.css {
+    background: #2196F3; /* Blue for CSS */
+}
+
+.progress-bar.js {
+    background: #f0db4f; /* Yellow for JavaScript */
+}
+
+.progress-bar.python {
+    background: #306998; /* Blue for Python */
+}
+
+.progress-bar.flask {
+    background: #6f4f37; /* Brown for Flask */
+}
+
+.progress-bar.ai-ml {
+    background: #f6a5b8; /* Light Pink for AI & ML */
+}
+
+.progress-bar.mongodb {
+    background: #47A247; /* Green for MongoDB */
+}
+
+/* Resume Button */
+#resume-btn {
+    background: #4D55CC;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #4D55CC, 0 0 20px #4D55CC;
+    transition: 0.3s;
+    text-decoration: none; /* Make it look like a button */
+    display: inline-block; /* Allow it to behave like a block-level button */
+    text-align: center; /* Center the text inside */
+}
+
+#resume-btn:hover {
+    background: #211C84;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #4D55CC, 0 0 40px #4D55CC;
+}
+
+/* Contact Section */
+#contact {
+    background: rgba(10, 0, 20, 0.7);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #4D55CC;
+    margin-top: 30px;
+    position: relative; /* Ensure elements are positioned correctly */
+}
+
+/* Game-style form inputs */
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 20px;
+    margin: 0;
+    background: #290033;
+    border: 2px solid #4D55CC;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #4D55CC;
+    outline: none;
+    font-family: 'Press Start 2P', cursive;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    animation: glowEffect 1.5s infinite alternate;
+    border: 2px solid #fff;
+}
+
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 0 10px #4D55CC, 0 0 20px #4D55CC;
+    }
+    100% {
+        box-shadow: 0 0 30px #4D55CC, 0 0 40px #4D55CC;
+    }
+}
+
+/* Button Styling */
+button {
+    background: #4D55CC;
+    border: 2px solid #fff;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #4D55CC;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #211C84;
+    box-shadow: 0 0 20px #4D55CC, 0 0 40px #4D55CC;
+    transform: scale(1.1);
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 30px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background: #4D55CC;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #4D55CC, 0 0 20px #4D55CC;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: #211C84;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #4D55CC, 0 0 40px #4D55CC;
+}
+
+/* Social Media Specific Styles */
+.linkedin {
+    background: #0077b5;
+}
+
+.instagram {
+    background: #E1306C;
+}
+
+.github {
+    background: #211C84;
+}
+
+
+/* ABOUT SECTION */
+#about {
+    text-align: center;
+    padding: 50px 20px;
+    background:  rgba(10, 0, 20, 0.7); /* Dark Blue Gradient */
+    border: 5px solid #7A73D1; /* Light Purple Border */
+    box-shadow: 0 0 20px #7A73D1;
+    border-radius: 15px;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* HEADINGS */
+#about h2 {
+    font-size: 28px;
+    color: #B5A8D5; /* Soft Lavender */
+    text-shadow: 0 0 10px #B5A8D5, 0 0 20px #7A73D1;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 20px;
+}
+
+/* ABOUT TEXT */
+#about p {
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #7A73D1, 0 0 10px #7A73D1;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.8;
+}
+
+/* ACHIEVEMENTS BOX */
+.achievements {
+    background: rgba(33, 28, 132, 0.8); /* Dark Blue with Transparency */
+    padding: 20px;
+    border: 3px solid #4D55CC; /* Medium Blue */
+    box-shadow: 0 0 15px #4D55CC;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* HIGH SCORES TITLE */
+.achievements h3 {
+    font-size: 22px;
+    color: #B5A8D5; /* Soft Lavender */
+    text-shadow: 0 0 10px #B5A8D5, 0 0 15px #7A73D1;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* INDIVIDUAL SCORE CARDS */
+.score-card {
+    background: rgba(125, 115, 209, 0.2); /* Light Purple Glow */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #7A73D1;
+    box-shadow: 0 0 10px #7A73D1;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    text-shadow: 0 0 5px #B5A8D5, 0 0 10px #B5A8D5;
+}
+
+/* SCORE VALUE */
+.score {
+    font-weight: bold;
+    color: #B5A8D5; /* Soft Lavender */
+    text-shadow: 0 0 5px #B5A8D5, 0 0 10px #B5A8D5;
+}
+
+/* HOVER EFFECT */
+.score-card:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px #4D55CC, 0 0 30px #7A73D1;
+}
+
+#mute-btn {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px;  /* Adjust as needed */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#mute-btn:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+#game-start {
+    position: absolute;
+    bottom: 20px; /* Adjusted to be at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* Initially hidden */
+}
+
+#play-game {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, opacity 0.3s;
+}
+
